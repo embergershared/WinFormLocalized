@@ -4,9 +4,9 @@
 
 ### Introduction
 
-To my surprise, I found difficult to get a decent explanation and code examples on how to localize (make multilingual) a Window Forms application.
+To my big surprise, I found it difficult to get a decent explanation and code examples on how to localize (make multilingual) a Window Forms application.
 
-After hours of research and tests, I found a way to do that and will share it here.
+After hours of research and tests, I found a way to do that I share here.
 
 ### Features
 
@@ -45,9 +45,7 @@ And, of course, can be greatly improved and complexified.
 
 ### 1. Create the project
 
-    !["Template selection](/media/10_CreateProjectSolution.png)
-
-    <!-- !["Start point"](/media/20_NewProject_result.png) -->
+  !["Template selection"](/media/10_CreateProjectSolution.png)
 
 ### 2. Adapt your UI
 
@@ -69,9 +67,9 @@ And, of course, can be greatly improved and complexified.
 
 The ComboBox content can be managed in 2 ways:
 
-  1. As an Items `Collection` directly in the ComboBox object
+  1. With an Items `Collection` directly in the ComboBox object
 
-  2. As a DataBinding to an external source
+  2. Through a DataBinding to an external source
 
 The `Option 1` is easy and when you understand how ComboBox operates, you can easily manipulate the [ComboBox.Items](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.items?view=windowsdesktop-7.0) and [ComboBox.SelectedIndex](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.selectedindex?view=windowsdesktop-7.0) properties with code.
 
@@ -171,8 +169,8 @@ For more flexibility, I decided to use `Option 2` / DataBinding for these 2 main
   ```
 
   Remarks:
-  - I used `Array` instead of a `List<Language>` because it is pretty static in nature.
-  - The use of a `IDictionary<string, Language[]>` will allow to make all code generic.
+  - I used an `Array` instead of a `List<Language>` because it is pretty static in nature.
+  - The use of a `IDictionary<string, Language[]>` will allow to the code generic.
 
 - Add code to `Form1.cs` to bind the Languages values to the ComboBox:
 
@@ -245,10 +243,11 @@ For more flexibility, I decided to use `Option 2` / DataBinding for these 2 main
   }
   ```
 
-  Now, the Form runs, and when the Language is changes, the language list in the ComboBox changes also:
+  Now, the Form runs, and when the Language is changed, the language list in the ComboBox changes also:
 
   !["combo EN"](/media/110_comboBox_EN.png) !["Combo FR"](/media/120_comboBox_FR.png)
 
+### 4. Make the Form UI multilingual
 
 
 
