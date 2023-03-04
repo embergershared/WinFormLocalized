@@ -4,34 +4,31 @@
 
 ### Introduction
 
-To my big surprise, I found it difficult to get a decent explanation and code examples on how to localize (make multilingual) a Window Forms application.
+To my big surprise, I found it difficult to get a decent explanation and code on how to localize (make multilingual) a Windows Forms application.
 
-After hours of research and tests, I found a way to do that I share here.
+After hours of research and tests, I found a way and share it here.
 
 ### Features
 
-This is a dumb empty WinForms that has these characteristics:
+This is a dumb empty WinForms with these characteristics:
 
-- Started from the Windows Forms App template
-- .NET Framework 4.7.2, with C# language
+- Built from the Windows Forms App template,
+- .NET Framework 4.7.2,
+- C# language,
 - Simple Form with:
-  - a Main form
-  - a ComboBox to switch language
-  - a Quit button that will adapt to the language
+  - a Main form (Form1),
+  - a ComboBox to switch language (comboBox1),
+  - a Quit button that will adapt to the language (button1),
 
-- When changing the language, the UI changes its display
+- When changing the language in the comboBox, the UI language changes:
 
   - English UI (Default):
 
-
   - Switch Language with ComboBox:
-
 
   - French UI:
 
-
-### Prerequisites
-
+This is the ideal starter for anything else and more complex.
 
 ### Disclaimer
 
@@ -47,39 +44,39 @@ And, of course, can be greatly improved and complexified.
 
   !["Template selection"](/media/10_CreateProjectSolution.png)
 
-### 2. Adapt your UI
+### 2. Adapt the Form UI
 
-  - Make the Form smaller
+- Make the Form smaller
 
-  - Add a Button (from Toolbox, drag-n-drop):
+- Add a Button (from Toolbox, drag-n-drop):
 
-      !["Add button"](/media/30_AddButton.png)
+    !["Add button"](/media/30_AddButton.png)
 
-  - Add a ComboBox (from Toolbox):
+- Add a ComboBox (from Toolbox):
 
-      !["Add ComboBox"](/media/40_AddComboBox.png)
+    !["Add ComboBox"](/media/40_AddComboBox.png)
 
-    Result so far:
+Result so far:
 
-    !["Form1"](/media/50_Form1.png)
+  !["Form1"](/media/50_Form1.png)
 
 ### 3. Setup the ComboBox
 
+The ComboBox allows to change the language of the Form.
+
 The ComboBox content can be managed in 2 ways:
 
-  1. With an Items `Collection` directly in the ComboBox object
+- Option 1: With an Items `Collection` directly in the ComboBox object,
 
-  2. Through a DataBinding to an external source
+- Option 2: Through a DataBinding to an external source.
 
-The `Option 1` is easy and when you understand how ComboBox operates, you can easily manipulate the [ComboBox.Items](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.items?view=windowsdesktop-7.0) and [ComboBox.SelectedIndex](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.selectedindex?view=windowsdesktop-7.0) properties with code.
+The `Option 1 - Items collection` is easy. When you understand how ComboBox operates, you can easily manipulate the [ComboBox.Items](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.items?view=windowsdesktop-7.0) and [ComboBox.SelectedIndex](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.selectedindex?view=windowsdesktop-7.0) properties with code.
 
-When we switch the UI language, the entire form (and its sub-objects) are re-created and re-initialized. This needs to be considered in terms of choice.
+For more flexibility, I decided to use `Option 2 DataBinding` for these  reasons:
 
-For more flexibility, I decided to use `Option 2` / DataBinding for these 2 main reasons:
+- The DataSource binding can be changed easily manipulated through code,
 
-  1. It gives control on the `Language` object properties and avoid "hard-coded" tests on locale in the code (see below),
-
-  2. I can change the binding in the dropdown, so when in French UI, the ComboBox items can be bound to a `French` language list (nice to have nugget - but could also be done with `Option 1`).
+- The source can be of any type and even dynamic.  
 
 #### ComboBox Items
 
