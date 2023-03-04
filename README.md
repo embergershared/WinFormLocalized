@@ -244,7 +244,7 @@ For more flexibility, I decided to use `Option 2 - DataBinding` for these  reaso
 
   !["combo EN"](/media/110_comboBox_EN.png) !["Combo FR"](/media/120_comboBox_FR.png)
 
-### 4. Make the Form UI multilingual
+### 4. Make the Form's UI multilingual
 
 
 
