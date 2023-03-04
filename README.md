@@ -80,7 +80,7 @@ For more flexibility, I decided to use `Option 2 - DataBinding` for these  reaso
 
 #### ComboBox Items
 
-- Create a folder `Classes` and a class `Lang` (so we don't conflict with the Built-in Class):
+- Create a folder `Classes` and a class `Lang` (so we don't conflict with the Built-in `Language` Class):
 
   ```C#
   namespace WindowsFormsApp1.Classes
