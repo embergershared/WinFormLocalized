@@ -72,7 +72,7 @@ The ComboBox content can be managed in 2 ways:
 
 The `Option 1 - Items collection` is easy. When you understand how ComboBox operates, you can easily manipulate the [ComboBox.Items](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.items?view=windowsdesktop-7.0) and [ComboBox.SelectedIndex](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.selectedindex?view=windowsdesktop-7.0) properties with code.
 
-For more flexibility, I decided to use `Option 2 DataBinding` for these  reasons:
+For more flexibility, I decided to use `Option 2 - DataBinding` for these  reasons:
 
 - The DataSource binding can be changed easily manipulated through code,
 
