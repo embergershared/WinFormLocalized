@@ -13,13 +13,13 @@ After hours of research and tests, I found a way and share it here.
 This is a dumb empty WinForms with these characteristics:
 
 - Built from the Windows Forms App template,
-- .NET Framework 4.7.2:
+- `.NET Framework 4.7.2`:
   ```
   <OutputType>WinExe</OutputType>
   <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   ```
   > Note:
-  > I also tested it succesfully with a .NET v6:
+  > I also tested it succesfully with `.NET 6.0`:
   > ```
   > <OutputType>WinExe</OutputType>
   > <TargetFramework>net6.0-windows</TargetFramework>
