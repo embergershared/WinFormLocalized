@@ -168,8 +168,8 @@ For more flexibility, I decided to use `Option 2 - DataBinding` for these  reaso
   ```
 
   Remarks:
-  - I used an `Array` instead of a `List<Language>` because it is pretty static in nature.
-  - The use of a `IDictionary<string, Language[]>` will allow to the code generic.
+  - I used an `Lang[]` Array instead of a `List<Lang>` List, because its content is pretty static in nature.
+  - The use of a `IDictionary<string, Lang[]>` will allow to the code to be generic and avoid hard-coded tests.
 
 - Add code to `Form1.cs` to bind the Languages values to the ComboBox:
 
