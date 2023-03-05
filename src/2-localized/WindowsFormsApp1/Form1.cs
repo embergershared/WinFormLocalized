@@ -78,5 +78,10 @@ namespace WindowsFormsApp1
                 SetComboBoxItemsLanguage("en-US");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }
