@@ -128,9 +128,6 @@
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>372, 120</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
   </data>
@@ -155,15 +152,14 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>12, 25</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Quit</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>693, 175</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -171,8 +167,9 @@
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>562, 120</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -189,16 +186,16 @@
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Quit</value>
+  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>fr-FR</value>
   </metadata>
 </root>
