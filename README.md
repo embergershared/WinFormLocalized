@@ -24,9 +24,11 @@ This is a dumb empty WinForms with these characteristics:
 
   - English UI (Default):
 
-  - Switch Language with ComboBox:
+  !["English Form"](/media/01_Form_EN.png)
 
   - French UI:
+
+  !["French Form"](/media/02_Form_FR.png)
 
 This is the ideal starter for anything else and more complex.
 
@@ -246,8 +248,106 @@ For more flexibility, I decided to use `Option 2 - DataBinding` for these  reaso
 
 ### 4. Make the Form's UI multilingual
 
+#### Change the Form's title
 
+- Select the `Form1` properties,
 
+- Change the `Text` property from `Form1` to whatever you want (I did `A multilingual form`).
+
+#### Setup the `Quit` Button
+
+Let's do something with the Button:
+
+- Select it and change the `Text` property value for `Quit`,
+
+- switch to `Events` and double click in `Click` to create its code,
+
+- Put the code (it closes the application):
+
+  ```
+  private void button1_Click(object sender, EventArgs e)
+  {
+      Dispose();
+  }
+  ```
+
+#### Make the Form multilingual
+
+Now that we have basics content showing and a feature, let's make it multilingual:
+
+- In the `Form1` property View, change `Localizable` from `False` to `True`:
+
+!["Property"](/media/130_Localizable_property.png)
+
+!["Localizable = True"](/media/140_Localizable_True.png)
+
+- Switch `Language` property to the other language(s) used. Here we will only use `French (France)`, which translates to `fr-FR`:
+
+!["Switch language"](/media/150_Language_fr-FR.png)
+
+- Change the `Text` property for a value in the language. Here, I used `Un formulaire multilingue`
+
+!["Form1 title in FR`](/media/160_Text_in_FR.png)
+
+- See what happened:
+
+  - The form's title is now in French, and the Form's designer have the suffix `(France)`:
+
+  !["Form1 title FR"](/media/170_Form1_title_FR.png)
+
+  - a `Form1.fr-FR.resx` file got created:
+
+  !["FR resource file"](/media/180_resFR_file.png)
+
+- Select the `button1`
+
+- Change its `Text` property for `Quitter`:
+
+  !["button in French`](/media/190_Button_quitter.png)
+
+- The Form in `French` is finished:
+
+  !["FR form"](/media/200_Form_FR.png)
+
+- Save All
+
+#### Wire the ComboBox to change the Form's UI
+
+The last step needed is to react to the change of language from the ComboBox:
+
+- In `Form1.cs`, create a new method:
+
+  ```C#
+  private void SetFormUiLanguage(string lang)
+  {
+    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+    this.Controls.Clear();
+    this.InitializeComponent();
+    SetComboBoxItemsLanguage(lang);
+  }
+  ```
+
+- In the method `Form1.Form1_Load()`, replace the call to `SetComboBoxItemsLanguage` by a call to `SetFormUiLanguage`,
+
+- In the method `Form1.comboBox1_SelectionChangeCommitted`, replace the 2 calls to `SetComboBoxItemsLanguage` by calls to `SetFormUiLanguage`,
+
+The result will look like:
+
+!["Methods call changes"](/media/210_Replaced_methods_calls.png)
+
+That's it!!!
+
+You can now test the back and forth between the 2 languages thanks to the ComboBox control.
+
+To add controls and continue developing the form:
+
+- Switch the `Language` property of `Form1` back to `Default`,
+
+- Add and customize additional controls,
+
+- Switch the `Language` property to `French (France)` to translate the new controls content.
+
+Hope this helps.
 
 ## References
 
