@@ -44,14 +44,24 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SetComboBoxItemsLanguage(_languages.First().Key);
+            SetFormUiLanguage(_languages.First().Key);
         }
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(comboBox1.SelectedValue.ToString()))
+            {
+                SetFormUiLanguage(comboBox1.SelectedValue.ToString());
+            }
+            else
+            {
+                SetFormUiLanguage("en-US");
+            }
+        }
+
 
         private void SetFormUiLanguage(string lang)
         {
-            //SetFormUiLanguage(_languages.First().Key);
-
-
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
             this.Controls.Clear();
             this.InitializeComponent();
@@ -65,18 +75,6 @@ namespace WindowsFormsApp1
             comboBox1.ValueMember = "Code";
             var index = Array.Find(_languages[lang], element => element.Code == lang).Index;
             comboBox1.SelectedIndex = index;
-        }
-
-        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(comboBox1.SelectedValue.ToString()))
-            {
-                SetComboBoxItemsLanguage(comboBox1.SelectedValue.ToString());
-            }
-            else
-            {
-                SetComboBoxItemsLanguage("en-US");
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)

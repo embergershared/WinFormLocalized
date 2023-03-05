@@ -24,9 +24,11 @@ This is a dumb empty WinForms with these characteristics:
 
   - English UI (Default):
 
-  - Switch Language with ComboBox:
+  !["English Form"](/media/01_Form_EN.png)
 
   - French UI:
+
+  !["French Form"](/media/02_Form_FR.png)
 
 This is the ideal starter for anything else and more complex.
 
@@ -309,6 +311,35 @@ Now that we have basics content showing and a feature, let's make it multilingua
 
 - Save All
 
+#### Wire the ComboBox to change the Form's UI
+
+The last step needed is to react to the change of language from the ComboBox:
+
+- In `Form1.cs`, create a new method:
+
+  ```C#
+  private void SetFormUiLanguage(string lang)
+  {
+    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+    this.Controls.Clear();
+    this.InitializeComponent();
+    SetComboBoxItemsLanguage(lang);
+  }
+  ```
+
+- In the method `Form1.Form1_Load()`, replace the call to `SetComboBoxItemsLanguage` by a call to `SetFormUiLanguage`,
+
+- In the method `Form1.comboBox1_SelectionChangeCommitted`, replace the 2 calls to `SetComboBoxItemsLanguage` by calls to `SetFormUiLanguage`,
+
+The result will look like:
+
+!["Methods call changes"](/media/210_Replaced_methods_calls.png)
+
+That's it!!!
+
+You can now test the back and forth between the 2 languages thanks to the ComboBox control.
+
+Hope this helps.
 
 ## References
 
