@@ -339,6 +339,14 @@ That's it!!!
 
 You can now test the back and forth between the 2 languages thanks to the ComboBox control.
 
+To add controls and continue developing the form:
+
+- Switch the `Language` property of the form to `Default`,
+
+- Add and customize all other controls,
+
+- Switch the `Language` property to `French (France)` to translate the new controls content.
+
 Hope this helps.
 
 ## References
