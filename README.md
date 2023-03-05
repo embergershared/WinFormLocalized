@@ -18,6 +18,12 @@ This is a dumb empty WinForms with these characteristics:
   <OutputType>WinExe</OutputType>
   <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   ```
+  > Note:
+  > I also tested it succesfully with a .NET v6:
+  > ```
+  > <OutputType>WinExe</OutputType>
+  > <TargetFramework>net6.0-windows</TargetFramework>
+  > ```
 - C# language,
 - Simple Form with:
   - a Main form (Form1),
