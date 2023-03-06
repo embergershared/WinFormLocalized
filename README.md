@@ -40,7 +40,7 @@ This is a dumb empty WinForms with these characteristics:
 
   !["French Form"](/media/02_Form_FR.png)
 
-This is the ideal starter for anything else and more complex.
+This is a great starter for anything else and more complex.
 
 ### Disclaimer
 
