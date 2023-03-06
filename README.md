@@ -14,21 +14,25 @@ This is a dumb empty WinForms with these characteristics:
 
 - Built from the Windows Forms App template,
 - `.NET Framework 4.7.2`:
-  ```
+
+  ```XML
   <OutputType>WinExe</OutputType>
   <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   ```
+
   > Note:
-  > I also tested it succesfully with `.NET 6.0`:
-  > ```
+  > I also tested it successfully with `.NET 6.0 (Long Term Support)`:
+  >
+  > ```XML
   > <OutputType>WinExe</OutputType>
   > <TargetFramework>net6.0-windows</TargetFramework>
   > ```
-- C# language,
+
+- `C#` language,
 - Simple Form with:
-  - a Main form (Form1),
-  - a ComboBox to switch language (comboBox1),
-  - a Quit button that will adapt to the language (button1),
+  - a Main form (`Form1`),
+  - a ComboBox to switch language (`comboBox1`),
+  - a Quit button that will adapt to the language (`button1`),
 
 - When changing the language in the comboBox, the UI language changes:
 
